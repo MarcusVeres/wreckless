@@ -21,7 +21,9 @@
         <ul class="meme-list row">
             <li ng-repeat="meme in premade" class="col-xs-4" >
                 <div class="image-wrapper">
+                    <p class="top">{{ meme.top }}</p>
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
+                    <p class="bottom">{{ meme.bottom }}</p>
                 </div>
             </li>
         </ul> 

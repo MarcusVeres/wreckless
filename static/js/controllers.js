@@ -161,7 +161,7 @@
             // visibility toggles
             
 
-            $scope.which = 'custom';
+            $scope.which = 'premade';
 
             $scope.is_visible = function( which ) {
                 if( $scope.which == which ){
