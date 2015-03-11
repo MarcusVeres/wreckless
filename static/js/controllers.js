@@ -113,6 +113,23 @@
         {
             console.log("loading manage controller");
 
+            // super fast and ghetto development
+
+            // user memes
+            $http({
+                method: 'GET',
+                url: '/assets/data/user.json'
+            })
+            .success( function( data ){
+                console.log("meme data:", data );
+                $scope.user = data;
+            })
+            .error( function( error ){
+                console.log("something went wrong:", error);
+            }); 
+
+
+            // memes from library
             $http({
                 method: 'GET',
                 url: '/assets/data/memes.json'
@@ -124,6 +141,38 @@
             .error( function( error ){
                 console.log("something went wrong:", error);
             }); 
+
+
+            // premade memes
+            $http({
+                method: 'GET',
+                url: '/assets/data/premade.json'
+            })
+            .success( function( data ){
+                console.log("meme data:", data );
+                $scope.premade = data;
+            })
+            .error( function( error ){
+                console.log("something went wrong:", error);
+            }); 
+
+
+            // ---------------------------
+            // visibility toggles
+            
+
+            $scope.which = 'custom';
+
+            $scope.is_visible = function( which ) {
+                if( $scope.which == which ){
+                    return true;
+                } 
+                return false;
+            }
+
+            $scope.switch_to = function( which ){
+                $scope.which = which;
+            }
 
         }
     ]);

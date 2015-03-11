@@ -1,0 +1,45 @@
+[
+    {
+        "name": "awkward-penguin",
+        "url": "/assets/memes/awkward-penguin.jpg",
+        "top": "says hello",
+        "bottom": "trips on feet"
+    },
+    {
+        "name": "bachelor-frog",
+        "url": "/assets/memes/bachelor-frog.jpg",
+        "top": "says hello",
+        "bottom": "farts"
+    },
+    {
+        "name": "bad-luck-brian",
+        "url": "/assets/memes/bad-luck-brian.jpg",
+        "top": "says hello",
+        "bottom": "dies"
+    },
+    {
+        "name": "forever-alone",
+        "url": "/assets/memes/forever-alone.jpg",
+        "top": "says hello",
+        "bottom": "nobody cares"
+    },
+    {
+        "name": "futurama-fry",
+        "url": "/assets/memes/futurama-fry.jpg",
+        "top": "not sure",
+        "bottom": "if hello"
+    },
+    {
+        "name": "good-guy-greg",
+        "url": "/assets/memes/good-guy-greg.jpg",
+        "top": "always says hello",
+        "bottom": "never punches"
+    },
+    {
+        "name": "insanity-wolf",
+        "url": "/assets/memes/insanity-wolf.jpg",
+        "top": "punch",
+        "bottom": "everybody"
+    }
+]
+
