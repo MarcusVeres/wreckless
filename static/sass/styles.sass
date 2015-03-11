@@ -96,6 +96,20 @@ section.footer
 
     img
         width: 100%
+        @include black-and-white()
+    
+    .col-xs-4
+        padding: 2px
+
+    .cell-parent
+        width: 100%
+
+    .cell-child
+        height: 100px
+
+    .action
+        color: $teal
+        font-size: 3rem
 
 
 // wrappers
@@ -115,6 +129,15 @@ section.footer
 
 .logo
     margin: 2rem 0 5rem 0
+
+
+.cell-parent
+    display: table
+    text-align: center
+
+.cell-child
+    vertical-align: middle
+    display: table-cell
 
 
 // hide the last separator in an array list

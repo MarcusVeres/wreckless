@@ -29,7 +29,14 @@
                     controllerAs: 'lc'
                 })
                 .when('/manage', {
-                    templateUrl: prefix + 'manage.html'
+                    templateUrl: prefix + 'manage.html',
+                    controller: 'ManageController',
+                    controllerAs: 'mc'
+                })
+                .when('/add', {
+                    templateUrl: prefix + 'add.html',
+                    controller: 'ManageController',
+                    controllerAs: 'mc'
                 })
                 .when('/test', {
                     templateUrl: prefix + 'test.html',
@@ -41,8 +48,8 @@
                 });
 
             // get rid of the hashes in the url
-            //$locationProvider.html5Mode( true );
-            console.log( $locationProvider );
+            // $locationProvider.html5Mode( true );
+            // console.log( "GGG", $locationProvider );
         }
     ]);
 

@@ -39,8 +39,42 @@
                  '$scope','$http','something',
         function( $scope , $http , something )
         {
-            console.log( "loading main navigation controller - loaded on every page" );
-            console.log( "property is:" , something.getProperty() );
+            // console.log( "loading main navigation controller - loaded on every page" );
+            // console.log( "property is:" , something.getProperty() );
+
+            $scope.$on('$routeChangeSuccess', function () 
+            {
+
+                console.log( 'href:' , window.location.href );    
+                
+                var current = window.location.href.split('/').pop();
+                console.log( "current: ", current );
+
+                if( current ){
+                    $scope.current_section = current;
+                } else {
+                    $scope.current_section = 'wreckless';
+                }
+
+                return;
+
+                // hide the dropdown menu
+                $scope.hide_menu();
+    
+                // scroll the window to the top of the page (people complained about this)
+                window.scrollTo(0,0);
+
+                // reset the mega phone margin
+                var mega_phone = document.getElementById("mega-phone");
+                if( mega_phone ){
+                    //console.log("RESETTING");
+                    mega_phone.style.marginTop = "1px";
+
+                }
+
+            });
+                        
+
         }
     ]);
 

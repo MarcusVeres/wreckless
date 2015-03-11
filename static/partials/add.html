@@ -1,13 +1,26 @@
 <section class="padded">
 <div class="content-wrapper">
 
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="btn btn-default form-control">
+                Premade
+            </button>
+        </div>
+        <div class="col-xs-6">
+            <button class="btn btn-default form-control">
+                Custom
+            </button>
+        </div>
+    </div>
+
     <div class="meme-wrapper" ng-show="true">   
         <ul class="meme-list row">
             <li class="col-xs-4">
                 <div class="cell-parent">
-                    <div class="cell-child">
-                        <i class="fa fa-fw fa-camera action"></i>
-                    </div>
+                <div class="cell-child">
+                    <i class="fa fa-fw fa-camera"></i>
+                </div>
                 </div>
             </li>
             <li ng-repeat="meme in memes" class="col-xs-4">
