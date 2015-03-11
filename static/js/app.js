@@ -38,6 +38,11 @@
                     controller: 'ManageController',
                     controllerAs: 'mc'
                 })
+                .when('/edit', {
+                    templateUrl: prefix + 'edit.html',
+                    controller: 'EditController',
+                    controllerAs: 'ec'
+                })
                 .when('/test', {
                     templateUrl: prefix + 'test.html',
                     controller: 'TestController',

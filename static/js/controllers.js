@@ -18,11 +18,16 @@
         var _this = this;
         
         this.property = 'value';        
+        this.current_meme = {}; // unset
 
         return {
         
-            getProperty: function(){
-                return _this.property;
+            getProperty: function( property ){
+                return _this[ property ];
+            },
+
+            setProperty: function( property , value ){
+                _this[ property ] = value;
             }
 
         };
@@ -108,8 +113,8 @@
 
     // manage
     appControllers.controller( 'ManageController' , [
-                 '$scope','$http','something',
-        function( $scope , $http , something )
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
         {
             console.log("loading manage controller");
 
@@ -121,7 +126,7 @@
                 url: '/assets/data/user.json'
             })
             .success( function( data ){
-                console.log("meme data:", data );
+                //console.log("meme data:", data );
                 $scope.user = data;
             })
             .error( function( error ){
@@ -135,8 +140,9 @@
                 url: '/assets/data/memes.json'
             })
             .success( function( data ){
-                console.log("meme data:", data );
+                //console.log("meme data:", data );
                 $scope.memes = data;
+                // console.log( "hnnnnngh" , $scope.memes[ 2 ] );
             })
             .error( function( error ){
                 console.log("something went wrong:", error);
@@ -149,7 +155,7 @@
                 url: '/assets/data/premade.json'
             })
             .success( function( data ){
-                console.log("meme data:", data );
+                //console.log("meme data:", data );
                 $scope.premade = data;
             })
             .error( function( error ){
@@ -160,7 +166,6 @@
             // ---------------------------
             // visibility toggles
             
-
             $scope.which = 'premade';
 
             $scope.is_visible = function( which ) {
@@ -174,8 +179,35 @@
                 $scope.which = which;
             }
 
+            // ---------------------------
+            // select a meme
+
+            $scope.select_meme = function( index ) 
+            {
+                // set the current meme in the something service so we can carry it across views
+                var selected = $scope.premade[ index ];
+                something.setProperty( 'current_meme' , selected ); 
+
+                // redirect to the edit screen
+                $location.path('/edit'); // path not hash
+            }
+
         }
     ]);
+
+
+    // edit
+    appControllers.controller( 'EditController' , [
+                 '$scope','$http','something',
+        function( $scope , $http , something )
+        {
+            console.log("loading edit controller");
+
+            // pull the selected meme
+            console.log( "this is:", something.getProperty('current_meme') );
+        }
+    ]);
+
 
 })(angular);
 
