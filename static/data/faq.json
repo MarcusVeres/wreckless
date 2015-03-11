@@ -1,0 +1,15 @@
+[
+    {
+        "question" : "Where is the library?",
+        "answer" : "Down the street and to the left, good sir."
+    },
+    {
+        "question" : "Where is the corner store?",
+        "answer" : "Down the street and to the right, good sir."
+    },
+    {
+        "question" : "Where is the supermarket?",
+        "answer" : "Just up the street, good sir."
+    }
+]
+

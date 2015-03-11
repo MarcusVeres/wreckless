@@ -1,0 +1,198 @@
+
+// -----------------------------------------
+// get our imports out of the way
+
+@import 'colors'
+@import 'constants'
+@import 'fonts'
+
+@import 'mixins'
+@import 'properties'
+@import 'typography'
+
+// @import 'overrides' // overrides theme-specific , e.g. bootstrap
+
+
+// -----------------------------------------
+// properties
+
+.centered
+    text-align: center
+
+
+// html elements
+
+html, body 
+    padding: 0
+    margin: 0
+
+body
+
+    //font-family: 'Roboto Slab', 'Helvetica Neue', sans-serif
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif
+    font-weight: 300
+    color: $text_color
+
+a
+    color: $orange
+
+    &:hover
+        color: $dark_orange
+
+    &.inverse
+        background-color: $orange
+        color: $white   
+
+        &:hover
+            background-color: $dark_orange !important
+
+h1, h2, h3, h4, h5, h6
+    font-weight: 300
+
+// nav
+
+.main-navigation
+    font-size: 2rem 
+    text-align: center
+    border-bottom: 1px solid $gray
+
+    h1
+        display: inline
+        font-size: 2.8rem
+        line-height: 5.5rem
+
+.nav-button
+    padding: 1rem
+    color: $gray
+
+
+
+
+
+// sections
+
+section 
+
+    width: 100%
+    clear: both
+    background-size: cover
+    background-position: center center
+   
+
+section.footer
+    margin-top: 9rem
+ 
+
+// backgrounds
+
+.some-bg
+    background-image: url('some_url.png')
+
+
+// lists
+
+.meme-list
+    @include unstyled-list()
+
+    img
+        width: 100%
+
+
+// wrappers
+
+.content-wrapper,
+    
+    max-width: $max_width
+    margin: auto
+    padding: 1em
+
+    &.squashed
+        padding-top: 0
+        padding-bottom: 0
+
+
+// components
+
+.logo
+    margin: 2rem 0 5rem 0
+
+
+// hide the last separator in an array list
+
+.delimiter
+    color: $light_gray
+
+.some-selector
+    span:last-child
+        .delimiter
+            display: none
+
+
+// horizontal rules
+
+hr.hairline
+    background: #CCC
+    height: 1px
+    border: none
+    width: 96%
+    margin-left: auto
+    margin-right: auto
+
+
+// default table styles
+
+table
+
+    width: 100%
+
+    tr
+        &:nth-child(2n)
+            background: #EEE
+        &:hover
+            background: $light_gray
+
+    td
+        padding: 2px
+
+
+// footer stuff
+
+.sitemap
+
+    @include unstyled-list() 
+    text-align: center
+    border-top: 1px solid $light_gray
+    padding-top: 1.4em
+
+    li
+        display: inline-block
+        border-left: 1px solid $gray
+        padding: 0 1em
+
+        &:first-child
+            border-left: none
+
+.copyright
+    text-align: center
+    color: $gray
+    padding: 1em
+
+
+// effects
+
+.hover-opacity
+    
+    &:hover
+        @include opacity(64)
+
+
+// hide from mobile devices
+
+@media screen and (max-width: 480px)
+
+    .hide-from-mobile
+        display: none
+
+
+// page-specific overrides
+

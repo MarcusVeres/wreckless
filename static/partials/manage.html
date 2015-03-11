@@ -1,0 +1,21 @@
+<section class="padded">
+<div class="content-wrapper">
+
+    This is the manage section
+   
+    <ul class="meme-list">
+        <li>
+            <div class="image-wrapper">
+                <i class="fa fa-fw fa-camera"></i>
+            </div>
+        </li>
+        <li ng-repeat="meme in memes">
+            <div class="image-wrapper">
+                <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
+            </div>
+        </li>
+    </ul> 
+
+</div>
+</section>
+
