@@ -3,18 +3,23 @@
 
     <div class="meme-wrapper" ng-show="true">   
         <ul class="meme-list row">
-            <li class="col-xs-4">
-                <div class="cell-parent">
-                    <div class="cell-child">
-                        <i class="fa fa-fw fa-camera action"></i>
+
+            <li class="col-xs-4 bg-light-gray">
+                <a href="#/add">
+                    <div class="cell-parent">
+                        <div class="cell-child">
+                            <i class="fa fa-fw fa-plus action"></i>
+                        </div>
                     </div>
-                </div>
+                </a>
             </li>
-            <li ng-repeat="meme in memes" class="col-xs-4">
+
+            <li ng-repeat="meme in user_memes" class="col-xs-4">
                 <div class="image-wrapper">
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
                 </div>
             </li>
+
         </ul> 
     </div>
 
