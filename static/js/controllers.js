@@ -86,6 +86,12 @@
                     $scope.current_section = 'wreckless';
                 }
 
+
+                // back button
+                $scope.go_back = function(){
+                    window.history.back();
+                }
+
                 return;
 
                 // hide the dropdown menu
