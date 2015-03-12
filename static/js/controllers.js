@@ -17,8 +17,28 @@
 
         var _this = this;
         
-        this.current_meme = {}; // unset
         this.is_wreckless = false;
+        this.current_meme = {};     // unset
+        this.user_memes = [];       // user has no memes at the start
+        this.meme_id = 0;           // ghetto way to do this, but it's a demo
+
+
+        //
+
+        function add_to_user_memes( meme_object )
+        {
+            // assign an id to the meme we add for the user
+            var id = _this.meme_id;
+            meme_object.id = id;
+
+            // add the object to our array
+            _this.user_memes.push( meme_object );
+
+            // move the id by one
+            _this.meme_id++;
+        }
+
+        // 
 
         return {
         
@@ -28,6 +48,11 @@
 
             setProperty: function( property , value ){
                 _this[ property ] = value;
+            },
+
+            add_meme: function( meme_object ){
+                add_to_user_memes( meme_object );
+                console.log( _this.user_memes );
             }
 
         };
@@ -222,8 +247,8 @@
 
     // edit
     appControllers.controller( 'EditController' , [
-                 '$scope','$http','something',
-        function( $scope , $http , something )
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
         {
             console.log("loading edit controller");
 
@@ -231,7 +256,16 @@
             $scope.current_meme = something.getProperty('current_meme');
             console.log( $scope.current_meme );
 
-            // TODO: ng-model the properties of the meme for saving ;)
+            // when the user saves the meme, add the current meme to their user_memes array
+            $scope.save = function()
+            {
+                // call the function
+                something.add_meme( $scope.current_meme );
+
+                // redirect to the manage screen
+                $location.path('/manage'); // path not hash
+            };
+
             // TODO: make it pretty
 
         }
