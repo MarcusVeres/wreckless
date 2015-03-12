@@ -38,6 +38,26 @@
             _this.meme_id++;
         }
 
+        function remove_from_user_memes( meme_object )
+        {
+            // find the item by its id
+            var id = meme_object.id;
+            console.log("the id is:", id);
+
+            for( var i = 0 , len = _this.user_memes.length ; i < len ; i++ )
+            {
+                var current = _this.user_memes[i];
+                if( id == current.id ){
+                    // remove the item
+                    _this.user_memes.splice( i , 1 );
+                    return;
+                }
+            }
+
+            // if we got here, we could not find the meme to remove it - i.e. an error
+            console.log( "could not find meme in user_memes:", meme_object );
+        }
+
         // 
 
         return {
@@ -52,7 +72,12 @@
 
             add_meme: function( meme_object ){
                 add_to_user_memes( meme_object );
-                console.log( _this.user_memes );
+                console.log( "user_memes after adding:" , _this.user_memes );
+            },
+
+            remove_meme: function( meme_object ){
+                remove_from_user_memes( meme_object );
+                console.log( "user_memes after removing:" , _this.user_memes );
             }
 
         };
@@ -75,10 +100,10 @@
             $scope.$on('$routeChangeSuccess', function () 
             {
 
-                console.log( 'href:' , window.location.href );    
+                // console.log( 'href:' , window.location.href );    
                 
                 var current = window.location.href.split('/').pop();
-                console.log( "current: ", current );
+                // console.log( "current: ", current );
 
                 if( current ){
                     $scope.current_section = current;
@@ -120,7 +145,7 @@
                  '$scope','$http','something',
         function( $scope , $http , something )
         {
-            console.log("loading landing controller");
+            // console.log("loading landing controller");
 
             /*
             CountryList.success( function( data ){
@@ -161,7 +186,7 @@
     appControllers.controller( 'TestController' , [
         function()
         {
-            console.log("loading test controller");
+            // console.log("loading test controller");
         }
     ]);
 
@@ -171,13 +196,13 @@
                  '$scope','$http','$location','something',
         function( $scope , $http , $location , something )
         {
-            console.log("loading manage controller");
+            // console.log("loading manage controller");
 
             // super fast and ghetto development
 
             // user memes
             $scope.user_memes = something.getProperty('user_memes');
-            console.log("getting user memes:" , $scope.user );
+            console.log("getting user memes:" , $scope.user_memes );
 
 
             // memes from library
@@ -261,7 +286,7 @@
                  '$scope','$http','$location','something',
         function( $scope , $http , $location , something )
         {
-            console.log("loading edit controller");
+            // console.log("loading edit controller");
 
             // pull the selected meme
             $scope.current_meme = something.getProperty('current_meme');
@@ -288,11 +313,21 @@
                  '$scope','$http','$location','something',
         function( $scope , $http , $location , something )
         {
-            console.log("loading review controller");
+            // console.log("loading review controller");
 
             // pull the selected meme
             $scope.current_meme = something.getProperty('current_meme');
             console.log( $scope.current_meme );
+
+            // when the user deletes the meme, remove it from their user_memes array
+            $scope.remove = function()
+            {
+                something.remove_meme( $scope.current_meme );
+
+                // redirect to the manage screen
+                $location.path('/manage'); 
+            };
+
         }
     ]);
 
