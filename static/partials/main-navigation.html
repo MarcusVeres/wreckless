@@ -1,3 +1,4 @@
+<!-- the navbar -->
 <div class="section main-navigation">
 
     <div class="nav-button pull-left" ng-click="go_back()">
@@ -8,9 +9,35 @@
         <h1 class="app-name">{{ current_section }}</h1>
     </a>
 
-    <div class="nav-button pull-right">
+    <div class="nav-button pull-right" ng-click="toggle_overlay()">
         <i class="fa fa-fw fa-bars"></i> 
     </div>
 
+</div>
+
+
+<!-- menu overlay -->
+<div class="menu-overlay" ng-show="is_overlay_visible()">
+<div class="content-wrapper">
+
+    <ul class="menu-list">
+        <li>
+            <a href="#/my-points">
+                My Points
+            </a>
+        </li>
+        <li>
+            <a href="#/contest-rules">
+                Contest Rules
+            </a>
+        </li>
+        <li>
+            <a href="#/terms">
+                Terms &amp; Conditions
+            </a>
+        </li>
+    </ul>
+
+</div>
 </div>
 

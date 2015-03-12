@@ -117,6 +117,31 @@
                     window.history.back();
                 }
 
+                // overlay menu
+
+                $scope.overlay_visibility = false;
+
+                $scope.is_overlay_visible = function(){
+                    return $scope.overlay_visibility;
+                }
+
+                $scope.show_overlay = function(){
+                    $scope.overlay_visibility = true;
+                }
+
+                $scope.hide_overlay = function(){
+                    $scope.overlay_visibility = false;
+                }
+                
+                $scope.toggle_overlay = function(){
+                    if( $scope.overlay_visibility ){
+                        $scope.hide_overlay();
+                        return;
+                    }
+                    $scope.show_overlay();
+                }
+
+
                 return;
 
                 // hide the dropdown menu
