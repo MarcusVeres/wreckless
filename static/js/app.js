@@ -43,6 +43,26 @@
                     controller: 'ReviewController',
                     controllerAs: 'rc'
                 })
+                .when('/terms', {
+                    templateUrl: prefix + 'terms.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/my-points', {
+                    templateUrl: prefix + 'my-points.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/contest-rules', {
+                    templateUrl: prefix + 'contest-rules.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/test', {
+                    templateUrl: prefix + 'test.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/test', {
                     templateUrl: prefix + 'test.html',
                     controller: 'TestController',
