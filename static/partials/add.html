@@ -20,7 +20,7 @@
     <div class="meme-wrapper" ng-show="is_visible('premade')">   
         <ul class="meme-list row">
             <li ng-repeat="meme in premade" class="col-xs-4" >
-                <div class="image-wrapper" ng-click="select_meme( $index )">
+                <div class="image-wrapper" ng-click="select_meme( 'premade' , $index )">
                     <p class="top">{{ meme.top }}</p>
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
                     <p class="bottom">{{ meme.bottom }}</p>
@@ -39,8 +39,8 @@
                 </div>
                 </div>
             </li>
-            <li ng-repeat="meme in memes" class="col-xs-4">
-                <div class="image-wrapper">
+            <li ng-repeat="meme in custom" class="col-xs-4">
+                <div class="image-wrapper" ng-click="select_meme( 'custom' , $index )">
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
                 </div>
             </li>

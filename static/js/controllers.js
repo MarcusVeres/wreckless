@@ -181,8 +181,7 @@
             })
             .success( function( data ){
                 //console.log("meme data:", data );
-                $scope.memes = data;
-                // console.log( "hnnnnngh" , $scope.memes[ 2 ] );
+                $scope.custom = data;
             })
             .error( function( error ){
                 console.log("something went wrong:", error);
@@ -222,10 +221,10 @@
             // ---------------------------
             // select a meme
 
-            $scope.select_meme = function( index ) 
+            $scope.select_meme = function( array_name , index ) 
             {
                 // set the current meme in the something service so we can carry it across views
-                var selected = $scope.premade[ index ];
+                var selected = $scope[ array_name ][ index ];
                 something.setProperty( 'current_meme' , selected ); 
 
                 // redirect to the edit screen
