@@ -99,6 +99,10 @@
 
             // control the user's state
 
+            $scope.is_wreckless = function(){
+                return something.getProperty( 'is_wreckless' );
+            }
+
             $scope.get_wreckless = function(){
                 something.setProperty( 'is_wreckless' , true );
                 console.log("oh, it's on now!");
