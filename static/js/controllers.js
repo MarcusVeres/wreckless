@@ -170,17 +170,8 @@
             // super fast and ghetto development
 
             // user memes
-            $http({
-                method: 'GET',
-                url: '/assets/data/user.json'
-            })
-            .success( function( data ){
-                //console.log("meme data:", data );
-                $scope.user = data;
-            })
-            .error( function( error ){
-                console.log("something went wrong:", error);
-            }); 
+            $scope.user_memes = something.getProperty('user_memes');
+            console.log("getting user memes:" , $scope.user );
 
 
             // memes from library

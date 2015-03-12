@@ -1,22 +1,25 @@
 <section class="padded">
 <div class="content-wrapper">
 
-    <div class="meme-wrapper" ng-show="true">   
+
+    <div class="meme-wrapper">   
         <ul class="meme-list row">
 
             <li class="col-xs-4 bg-light-gray">
                 <a href="#/add">
-                    <div class="cell-parent">
-                        <div class="cell-child">
-                            <i class="fa fa-fw fa-plus action"></i>
-                        </div>
+                <div class="cell-parent">
+                    <div class="cell-child">
+                        <i class="fa fa-fw fa-plus"></i>
                     </div>
+                </div>
                 </a>
             </li>
 
-            <li ng-repeat="meme in user_memes" class="col-xs-4">
-                <div class="image-wrapper">
+            <li ng-repeat="meme in user_memes" class="col-xs-4" >
+                <div class="image-wrapper" ng-click="select_meme( $index )">
+                    <p class="top">{{ meme.top }}</p>
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
+                    <p class="bottom">{{ meme.bottom }}</p>
                 </div>
             </li>
 
