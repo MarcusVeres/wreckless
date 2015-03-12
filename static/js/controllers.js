@@ -17,8 +17,8 @@
 
         var _this = this;
         
-        this.property = 'value';        
         this.current_meme = {}; // unset
+        this.is_wreckless = false;
 
         return {
         
@@ -86,8 +86,8 @@
 
     // landing page
     appControllers.controller( 'LandingController' , [
-                 '$scope','$http',/*'CountryList',*/
-        function( $scope , $http /*, CountryList*/ )
+                 '$scope','$http','something',
+        function( $scope , $http , something )
         {
             console.log("loading landing controller");
 
@@ -97,7 +97,27 @@
             })
             */
 
-            console.log($scope);
+            // control the user's state
+
+            $scope.get_wreckless = function(){
+                something.setProperty( 'is_wreckless' , true );
+                console.log("oh, it's on now!");
+            }
+
+            $scope.chill_out = function(){
+                something.setProperty( 'is_wreckless' , false );
+                console.log("meh... ");
+            }
+
+            $scope.toggle_wreckless = function(){
+                var is_wreckless = something.getProperty('is_wreckless');
+                if( is_wreckless ){
+                    $scope.chill_out();
+                } else {
+                    $scope.get_wreckless();
+                }
+            }
+
         }
     ]);
 
