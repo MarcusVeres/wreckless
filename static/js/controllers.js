@@ -228,7 +228,12 @@
             console.log("loading edit controller");
 
             // pull the selected meme
-            console.log( "this is:", something.getProperty('current_meme') );
+            $scope.current_meme = something.getProperty('current_meme');
+            console.log( $scope.current_meme );
+
+            // TODO: ng-model the properties of the meme for saving ;)
+            // TODO: make it pretty
+
         }
     ]);
 

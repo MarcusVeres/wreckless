@@ -79,7 +79,49 @@ section
 
 section.footer
     margin-top: 9rem
- 
+
+
+// wrappers
+
+.content-wrapper,
+    
+    max-width: $max_width
+    margin: auto
+    padding: 1em
+
+    &.squashed
+        padding-top: 0
+        padding-bottom: 0
+
+
+.image-wrapper
+    position: relative
+    text-align: center
+    max-width: 250px
+    margin: auto
+     
+    p
+        position: absolute
+        color: white
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4)
+        z-index: 10
+        text-transform: uppercase
+        font-size: 2rem
+        font-weight: 700
+        text-align: center
+        width: 100%
+        line-height: 1em
+        margin: 0
+        padding: 0
+
+        &.top
+            top: 0
+            margin-top: 0.4rem
+
+        &.bottom
+            bottom: 0
+            margin-bottom: 0.4rem
+
 
 // backgrounds
 
@@ -109,44 +151,17 @@ section.footer
         color: $teal
         font-size: 3rem
 
-
     .image-wrapper
-        position: relative
         
         p
-            position: absolute
-            color: white
-            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4)
-            z-index: 10
-            text-transform: uppercase
-            font-weight: 700
-            text-align: center
-            width: 100%
+            font-size: 1rem
             line-height: 1em
-            margin: 0
-            padding: 0
 
             &.top
-                top: 0
                 margin-top: 0.4rem
 
             &.bottom
-                bottom: 0
                 margin-bottom: 0.4rem
-
-
-// wrappers
-
-.content-wrapper,
-    
-    max-width: $max_width
-    margin: auto
-    padding: 1em
-
-    &.squashed
-        padding-top: 0
-        padding-bottom: 0
-
 
 // components
 
