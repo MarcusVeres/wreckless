@@ -23,16 +23,6 @@
                     controller: 'LandingController',
                     controllerAs: 'lc'
                 })
-                .when('/landing', {
-                    templateUrl: prefix + 'landing.html',
-                    controller: 'LandingController',
-                    controllerAs: 'lc'
-                })
-                .when('/manage', {
-                    templateUrl: prefix + 'manage.html',
-                    controller: 'ManageController',
-                    controllerAs: 'mc'
-                })
                 .when('/add', {
                     templateUrl: prefix + 'add.html',
                     controller: 'ManageController',
@@ -42,6 +32,16 @@
                     templateUrl: prefix + 'edit.html',
                     controller: 'EditController',
                     controllerAs: 'ec'
+                })
+                .when('/manage', {
+                    templateUrl: prefix + 'manage.html',
+                    controller: 'ManageController',
+                    controllerAs: 'mc'
+                })
+                .when('/review', {
+                    templateUrl: prefix + 'review.html',
+                    controller: 'ReviewController',
+                    controllerAs: 'rc'
                 })
                 .when('/test', {
                     templateUrl: prefix + 'test.html',

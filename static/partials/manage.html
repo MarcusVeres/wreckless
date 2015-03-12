@@ -16,7 +16,7 @@
             </li>
 
             <li ng-repeat="meme in user_memes" class="col-xs-4" >
-                <div class="image-wrapper" ng-click="preview_meme( 'user_memes' , meme.id )">
+                <div class="image-wrapper" ng-click="review_meme( 'user_memes' , meme.id )">
                     <p class="top">{{ meme.top }}</p>
                     <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
                     <p class="bottom">{{ meme.bottom }}</p>

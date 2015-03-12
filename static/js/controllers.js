@@ -218,8 +218,9 @@
                 $scope.which = which;
             }
 
+
             // ---------------------------
-            // select a meme
+            // select a meme for editing
 
             $scope.select_meme = function( array_name , index ) 
             {
@@ -229,6 +230,20 @@
 
                 // redirect to the edit screen
                 $location.path('/edit'); // path not hash
+            }
+
+
+            // ---------------------------
+            // select a user meme for review / sharing
+
+            $scope.review_meme = function( array_name , index ) 
+            {
+                // set the current meme in the something service so we can carry it across views
+                var selected = $scope[ array_name ][ index ];
+                something.setProperty( 'current_meme' , selected ); 
+
+                // redirect to the edit screen
+                $location.path('/review'); // path not hash
             }
 
         }
@@ -258,6 +273,20 @@
 
             // TODO: make it pretty
 
+        }
+    ]);
+
+
+    // review
+    appControllers.controller( 'ReviewController' , [
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
+        {
+            console.log("loading review controller");
+
+            // pull the selected meme
+            $scope.current_meme = something.getProperty('current_meme');
+            console.log( $scope.current_meme );
         }
     ]);
 
