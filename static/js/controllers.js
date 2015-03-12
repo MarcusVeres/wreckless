@@ -177,7 +177,7 @@
             // memes from library
             $http({
                 method: 'GET',
-                url: '/assets/data/memes.json'
+                url: '/assets/data/custom.json'
             })
             .success( function( data ){
                 //console.log("meme data:", data );
