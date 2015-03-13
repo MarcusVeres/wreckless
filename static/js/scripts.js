@@ -1,4 +1,4 @@
 (function(){
-    console.log("bitch, this is a great test!");
+    console.log("All systems go!");
 })();
 
