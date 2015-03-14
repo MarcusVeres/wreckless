@@ -1,4 +1,4 @@
-## Wreckless Mockup
+## Wreckless Wireframe
 
 This demo is ideally viewed in the Chrome browser, using an emulator for a mobile device (iPhone 5 is recommended).
 
@@ -7,6 +7,8 @@ This demo is ideally viewed in the Chrome browser, using an emulator for a mobil
 ## Preface
 
 Let it be made clear that this document is subject to changes based on client requirements. 
+
+The mockup is intended to serve as a wireframe, and is not representative of the final design. It merely showcases functionality and relationships between pages.
 
 The core functionality described within will stay consistent, but small add-on features may be requested in the coming days. 
 
