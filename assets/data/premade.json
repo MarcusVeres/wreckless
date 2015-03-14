@@ -2,44 +2,44 @@
     {
         "name": "awkward-penguin",
         "url": "/assets/memes/awkward-penguin.jpg",
-        "top": "says hello",
-        "bottom": "trips on feet"
+        "top": "texts while driving",
+        "bottom": "makes eye contact with cop"
     },
     {
         "name": "bachelor-frog",
         "url": "/assets/memes/bachelor-frog.jpg",
-        "top": "says hello",
-        "bottom": "farts"
+        "top": "texts while driving",
+        "bottom": "crashes car"
     },
     {
         "name": "bad-luck-brian",
         "url": "/assets/memes/bad-luck-brian.jpg",
-        "top": "says hello",
+        "top": "gets in car",
         "bottom": "dies"
     },
     {
         "name": "forever-alone",
         "url": "/assets/memes/forever-alone.jpg",
-        "top": "says hello",
+        "top": "texts while driving",
         "bottom": "nobody cares"
     },
     {
         "name": "futurama-fry",
         "url": "/assets/memes/futurama-fry.jpg",
         "top": "not sure",
-        "bottom": "if hello"
+        "bottom": "if driving"
     },
     {
         "name": "good-guy-greg",
         "url": "/assets/memes/good-guy-greg.jpg",
-        "top": "always says hello",
-        "bottom": "never punches"
+        "top": "never ever",
+        "bottom": "texts while driving"
     },
     {
         "name": "insanity-wolf",
         "url": "/assets/memes/insanity-wolf.jpg",
-        "top": "punch",
-        "bottom": "everybody"
+        "top": "drink and text",
+        "bottom": "while riding a bike"
     }
 ]
 
