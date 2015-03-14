@@ -44,13 +44,13 @@ The application will not do anything once wreckless mode is turned off.
 
 ### Meme Management
 
-The heart of the messenger will be a pool of memes located on the user's phone. Users who download the application will not have any memes circulating in their pool. 
+The heart of the messenger will be a pool of memes located on the user's phone. When users first download the application, they will not have any memes circulating in their pool. 
 
 Users may add to the meme pool by selecting from a list of pre-made memes (available on a server), or creating their own (custom memes). 
 
-Custom memes may use a template from a library, a photograph from the user's photo library, or a photograph taken on the spon with the user's phone.
+Custom memes may use a template from a library, a photograph from the user's photo library, or a photograph taken on the spot.
 
-Users may delete memes once they have been created. 
+Users may delete memes once they have been created. This removes them from the user's roster. 
 
 
 ### Image Editing
