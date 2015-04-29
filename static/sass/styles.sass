@@ -19,6 +19,10 @@
 .centered
     text-align: center
 
+.points-display
+    margin-top: 1rem
+    font-size: 8rem
+
 
 // html elements
 
@@ -148,6 +152,27 @@ section.footer
 
 
 // lists
+
+.prizes
+    @include unstyled-list()
+    margin-top: 3rem
+    text-align: center
+
+    li
+        border-top: 1px solid #DDD
+        padding-top: 1rem
+
+        &:first-child
+            border-top: none
+
+    h4
+        font-size: 1.4rem
+        font-weight: 700
+
+    .date-won
+        font-size: 1rem
+        color: #666
+
 
 .menu-list
     @include unstyled-list()
