@@ -26,6 +26,9 @@
 .full-width
     width: 100%
 
+.spaced
+    margin-top: 1rem
+    margin-bottom: 1.2rem
 
 // html elements
 
@@ -56,6 +59,13 @@ a
 
 h1, h2, h3, h4, h5, h6
     font-weight: 300
+
+
+h5
+
+    &.title
+        font-weight: 400
+        padding-bottom: 1.1rem
 
 // nav
 
@@ -100,7 +110,10 @@ section
     clear: both
     background-size: cover
     background-position: center center
-   
+  
+    &.padded
+        padding: 2rem 0
+
 
 section.footer
     margin-top: 9rem
@@ -118,6 +131,7 @@ section.footer
         padding-top: 0
         padding-bottom: 0
 
+    
 
 .image-wrapper
     position: relative
