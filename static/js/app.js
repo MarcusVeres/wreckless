@@ -53,6 +53,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/on-boarding', {
+                    templateUrl: prefix + 'on-boarding.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/contest-rules', {
                     templateUrl: prefix + 'contest-rules.html',
                     controller: 'TestController',
