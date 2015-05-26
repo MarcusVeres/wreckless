@@ -68,6 +68,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/points-guide', {
+                    templateUrl: prefix + 'points-guide.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/landing', {
                     templateUrl: prefix + 'landing.html',
                     controller: 'TestController',
