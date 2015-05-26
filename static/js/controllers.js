@@ -117,6 +117,16 @@
                     window.history.back();
                 }
 
+                // check if the user is on the home page or not
+                $scope.is_not_home_page = function()
+                {
+                    if( current !== 'home' ){
+                        return true;
+                    }
+                    return false;
+                }
+
+
                 // overlay menu
 
                 $scope.overlay_visibility = false;
