@@ -19,6 +19,11 @@
 
             $routeProvider
                 .when('/', {
+                    templateUrl: prefix + 'landing.html',
+                    controller: 'LandingController',
+                    controllerAs: 'lc'
+                })
+                .when('/home', {
                     templateUrl: prefix + 'home.html',
                     controller: 'HomeController',
                     controllerAs: 'hc'
@@ -53,8 +58,8 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
-                .when('/on-boarding', {
-                    templateUrl: prefix + 'on-boarding.html',
+                .when('/landing', {
+                    templateUrl: prefix + 'landing.html',
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
