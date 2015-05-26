@@ -367,5 +367,27 @@
     ]);
 
 
+    // leaderboard
+    appControllers.controller( 'LeaderboardController' , [
+                 '$scope','$http',
+        function( $scope , $http )
+        {
+            // console.log("loading edit controller");
+
+            $http({
+                method: "GET",
+                url: "/assets/data/leaderboard.json"
+            })
+            .success( function( data ){
+                console.log("the data is:", data);
+                $scope.leaderboard = data;
+            })
+            .error( function( error ){
+                console.log("something went wrong:", error);
+            });
+
+        }
+    ]);
+
 })(angular);
 

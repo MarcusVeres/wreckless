@@ -50,8 +50,8 @@
                 })
                 .when('/leaderboard', {
                     templateUrl: prefix + 'leaderboard.html',
-                    controller: 'TestController',
-                    controllerAs: 'tc'
+                    controller: 'LeaderboardController',
+                    controllerAs: 'lbc'
                 })
                 .when('/terms', {
                     templateUrl: prefix + 'terms.html',

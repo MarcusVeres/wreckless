@@ -2,18 +2,18 @@
 <div class="content-wrapper centered">
 
     <table class="leaderboard">
-        <tr>
+        <tr ng-repeat="user in leaderboard" ng-class="{ selected: user.selected }">
             <td class="rank">
-                1
+                {{ user.rank }}
             </td>
             <td>
-                Lorem
+                {{ user.first_name }}
             </td>
             <td>
-                Ipsum
+                {{ user.last_name }}
             </td>
             <td>
-                Ontario
+                {{ user.location }}
             </td>
         </tr>
     </table>
