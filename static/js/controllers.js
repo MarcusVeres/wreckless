@@ -165,12 +165,12 @@
     ]);
 
 
-    // landing page
-    appControllers.controller( 'LandingController' , [
+    // home page
+    appControllers.controller( 'HomeController' , [
                  '$scope','$http','something',
         function( $scope , $http , something )
         {
-            // console.log("loading landing controller");
+            // console.log("loading home controller");
 
             /*
             CountryList.success( function( data ){

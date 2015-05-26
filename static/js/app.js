@@ -19,9 +19,9 @@
 
             $routeProvider
                 .when('/', {
-                    templateUrl: prefix + 'landing.html',
-                    controller: 'LandingController',
-                    controllerAs: 'lc'
+                    templateUrl: prefix + 'home.html',
+                    controller: 'HomeController',
+                    controllerAs: 'hc'
                 })
                 .when('/add', {
                     templateUrl: prefix + 'add.html',
