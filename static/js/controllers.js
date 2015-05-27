@@ -117,14 +117,44 @@
                     window.history.back();
                 }
 
-                // check if the user is on the home page or not
-                $scope.is_not_home_page = function()
+                console.log(current);
+
+                // what's in the nav menu?
+
+                $scope.nav_has_back = function()
                 {
-                    if( current !== 'home' ){
+                    switch( current )
+                    {
+                        case 'home':
+                            return false;
+                            break;
+                        case '':
+                            return false;
+                            break;
+                        default: 
+                            return true;
+                    }
+                }
+
+                $scope.nav_has_menu = function()
+                {
+                    if( current == "" ||
+                        current == 'login' ||
+                        current == 'register' )
+                    {
+                        return false;
+                    }
+                    return true;
+                }
+
+                $scope.nav_has_notifications = function()
+                {
+                    if( current === 'home' ){
                         return true;
                     }
                     return false;
                 }
+
 
 
                 // overlay menu
