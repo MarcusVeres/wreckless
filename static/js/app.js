@@ -98,6 +98,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/forgot', {
+                    templateUrl: prefix + 'forgot.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/reset', {
                     templateUrl: prefix + 'reset.html',
                     controller: 'TestController',
