@@ -1,20 +1,23 @@
-<section class="padded">
-<div class="content-wrapper centered">
+<section class="padded centered">
+<div class="content-wrapper tight">
 
-    <h4 class="">
-        Login
-    </h4>
-    
-    <button class="btn btn-primary facebook">
+    <button class="btn btn-primary form-control facebook">
         <i class="fa fa-fw fa-facebook"></i> Log in with Facebook
     </button>
 
-    <div class="row spaced">
-        <div class="col-xs-12">
-            <input type="text" ng-model="login.username" />
+</div>
+</section>
+
+
+<section class="centered">
+<div class="content-wrapper tight">
+
+    <div class="spaced">
+        <div class="spaced-element">
+            <input class="form-control" type="text" placeholder="username" ng-model="login.username" />
         </div>
-        <div class="col-xs-12">
-            <input type="text" ng-model="login.password" />
+        <div class="spaced-element">
+            <input class="form-control" type="password" placeholder="password" ng-model="login.password" />
         </div>
     </div>
 
@@ -22,16 +25,20 @@
 </section>
 
 
-<section class="padded">
-<div class="content-wrapper">
+<section class="padded centered">
+<div class="content-wrapper tight">
 
-    <button class="btn btn-default" ng-click="login()">
-        Login 
-    </button>
-
-    <a href="#/forgot">
-        Forgot your password?
+    <a href="#/home">
+        <button class="btn btn-default form-control">
+            Login 
+        </button>
     </a>
+
+    <div class="spaced">
+        <a href="#/forgot">
+            Forgot your password?
+        </a>
+    </div>
 
 </div>
 </section>
