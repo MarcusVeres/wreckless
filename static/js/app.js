@@ -88,8 +88,18 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
-                .when('/test', {
-                    templateUrl: prefix + 'test.html',
+                .when('/login', {
+                    templateUrl: prefix + 'login.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/register', {
+                    templateUrl: prefix + 'register.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/reset', {
+                    templateUrl: prefix + 'reset.html',
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
