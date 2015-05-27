@@ -108,7 +108,7 @@
                 if( current ){
                     $scope.current_section = current;
                 } else {
-                    $scope.current_section = 'wreckless';
+                    $scope.current_section = 'TEXi';
                 }
 
 
