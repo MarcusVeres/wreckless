@@ -1,0 +1,27 @@
+[
+    {
+        "icon" : "cutlery",
+        "description" : "One free meal",
+        "points": "200"
+    },
+    {
+        "icon" : "car",
+        "description" : "30% off gas",
+        "points": "500"
+    },
+    {
+        "icon" : "shopping-cart",
+        "description" : "$50 gift card",
+        "points": "700"
+    },
+    {
+        "icon" : "briefcase",
+        "description" : "A luxury novelty briefcase",
+        "points": "800"
+    },
+    {
+        "icon" : "bed",
+        "description" : "One stay at a motel",
+        "points": "1000"
+    }
+]

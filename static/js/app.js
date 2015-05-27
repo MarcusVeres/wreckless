@@ -65,8 +65,8 @@
                 })
                 .when('/my-points', {
                     templateUrl: prefix + 'my-points.html',
-                    controller: 'TestController',
-                    controllerAs: 'tc'
+                    controller: 'PointsController',
+                    controllerAs: 'pc'
                 })
                 .when('/points-guide', {
                     templateUrl: prefix + 'points-guide.html',

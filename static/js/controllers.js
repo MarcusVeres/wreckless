@@ -433,5 +433,31 @@
         }
     ]);
 
+
+    // points page
+    appControllers.controller( 'PointsController' , [
+                 '$scope','$http',
+        function( $scope , $http )
+        {
+
+            // get the prize list
+            $http({
+                method: 'GET',
+                url: '/assets/data/prizes.json'
+            })
+            .success( function( data ){
+
+                console.log("Prize list:", data);
+                $scope.prizes = data;
+
+            })
+            .error( function( error ){
+                console.log("something went wrong:", error);
+            });
+
+        }
+    ]);
+
+
 })(angular);
 
