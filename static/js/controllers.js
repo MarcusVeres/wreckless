@@ -243,6 +243,13 @@
                 }
             }
 
+
+            // user memes
+
+            $scope.user_memes = something.getProperty('user_memes');
+            console.log("getting user memes:" , $scope.user_memes );
+
+
         }
     ]);
 

@@ -1,8 +1,8 @@
 
-<section class="padded centered">
+<section class="centered">
 <div class="content-wrapper">
 
-    <h1 class="logo centered" ng-class="{wreckless: is_wreckless() }">
+    <h1 class="spaced" ng-class="{wreckless: is_wreckless() }">
         <img src="http://placehold.it/88x100" />
     </h1>
 
@@ -10,16 +10,42 @@
         Start / Stop Texi
     </div>
 
-    <!--
-        if you have memes, memes show up
-    -->
+</div>
+</section>
+
+
+<section class="padded centered">
+<div class="content-wrapper">
+
+    <h5 class="title">
+        Your Memes
+    </h5>
+
+    <div class="meme-wrapper">   
+        <ul class="meme-list row">
+
+            <li ng-repeat="meme in user_memes" class="col-xs-4" >
+                <div class="image-wrapper" ng-click="review_meme( 'user_memes' , $index )">
+                    <p class="top">{{ meme.top }}</p>
+                    <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
+                    <p class="bottom">{{ meme.bottom }}</p>
+                </div>
+            </li>
+
+        </ul> 
+    </div>
 
     <a href="#/manage">
         <button class="btn btn-default">
-            Manage Memes
+            Add Memes
         </div>
     </a>
 
 </div>
 </section>
+
+
+<div class="banner-ad">
+    <img class="fullwidth" src="http://placehold.it/320x60" />
+</div>
 
