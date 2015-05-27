@@ -44,18 +44,25 @@
         Your Memes
     </h5>
 
-    <div class="meme-wrapper">   
-        <ul class="meme-list row">
+    <div ng-if="user_has_memes()">
+        <div class="meme-wrapper">   
+            <ul class="meme-list row">
 
-            <li ng-repeat="meme in user_memes" class="col-xs-4" >
-                <div class="image-wrapper" ng-click="review_meme( 'user_memes' , $index )">
-                    <p class="top">{{ meme.top }}</p>
-                    <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
-                    <p class="bottom">{{ meme.bottom }}</p>
-                </div>
-            </li>
+                <li ng-repeat="meme in user_memes" class="col-xs-4" >
+                    <div class="image-wrapper" ng-click="review_meme( 'user_memes' , $index )">
+                        <p class="top">{{ meme.top }}</p>
+                        <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
+                        <p class="bottom">{{ meme.bottom }}</p>
+                    </div>
+                </li>
 
-        </ul> 
+            </ul> 
+        </div>
+    </div>
+    <div ng-if="!user_has_memes()">
+        <p class="copy">
+            You do not have any memes in your library.
+        </p>
     </div>
 
     <a href="#/manage">

@@ -247,8 +247,15 @@
             // user memes
 
             $scope.user_memes = something.getProperty('user_memes');
-            console.log("getting user memes:" , $scope.user_memes );
+            // console.log("getting user memes:" , $scope.user_memes );
 
+            $scope.user_has_memes = function()
+            {
+                if( $scope.user_memes.length > 0 ){
+                    return true;
+                }
+                return false;
+            }
 
         }
     ]);
