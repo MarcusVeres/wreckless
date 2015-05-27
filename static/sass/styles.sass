@@ -186,7 +186,7 @@ section.footer
 
 // lists
 
-.prizes
+.prize-list
     @include unstyled-list()
     margin-top: 3rem
     text-align: center
@@ -307,6 +307,8 @@ section.footer
     
     &._20
         height: 20px
+    &._40
+        height: 40px
     &._80
         height: 80px
 
@@ -369,6 +371,18 @@ table
 
     td
         padding: 2px
+
+
+.prizes
+    //border-top: 1px solid $gray
+
+    td 
+        padding-top: 0.4rem
+        padding-bottom: 0.6rem
+
+    .description,
+    .points
+        text-align: left
 
 
 // footer stuff
