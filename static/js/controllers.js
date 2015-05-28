@@ -91,8 +91,8 @@
 
     // main navigation (in header)
     appControllers.controller( 'MainNavigationController' , [
-                 '$scope','$http','something',
-        function( $scope , $http , something )
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
         {
             // console.log( "loading main navigation controller - loaded on every page" );
             // console.log( "property is:" , something.getProperty() );
@@ -114,7 +114,38 @@
 
                 // back button
                 $scope.go_back = function(){
-                    window.history.back();
+
+                    // back button does different things
+
+                    var go_to = '';
+
+                    switch( current )
+                    {
+                        case 'login':
+                            go_to = '/';
+                            break;
+                        case 'register':
+                            go_to = '/';
+                            break;
+                        case 'reset':
+                            go_to = '/forgot';
+                            break;
+                        case 'forgot':
+                            go_to = '/login';
+                            break;
+                        case 'manage':
+                            go_to = '/home';
+                            break;
+                        case 'add':
+                            go_to = '/manage';
+                            break;
+                        default: 
+                            window.history.back();
+                    }
+
+                    // if not going back, redirect to the go_to var
+                    $location.path( go_to ); // path not hash
+
                 }
 
                 console.log(current);
