@@ -23,22 +23,24 @@
         Available Prizes
     </h5>
 
+    <a href="#/tbd-prize">
     <table class="prizes">
         <tr ng-repeat="prize in prizes">
-            <td class="icon">
-                <i class="fa fa-fw fa-{{ prize.icon }}"></i>
-            </td>
-            <td class="description">
-                {{ prize.description }} 
-            </td>
-            <td class="points">
-                [{{ prize.points }}]
-            </td>
-            <td class="cta">
-                &raquo;
-            </td>
+                <td class="icon">
+                    <i class="fa fa-fw fa-{{ prize.icon }}"></i>
+                </td>
+                <td class="description">
+                    {{ prize.description }} 
+                </td>
+                <td class="points">
+                    [{{ prize.points }}]
+                </td>
+                <td class="cta">
+                    &raquo;
+                </td>
         </tr>
     </table>
+    </a>
 
 </div>
 </section>

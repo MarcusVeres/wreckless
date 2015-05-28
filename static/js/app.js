@@ -113,6 +113,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/tbd-prize', {
+                    templateUrl: prefix + 'tbd-prize.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .otherwise({
                     redirectTo: '/'
                 });
