@@ -55,8 +55,8 @@
                 })
                 .when('/take-photo', {
                     templateUrl: prefix + 'take-photo.html',
-                    controller: 'TestController',
-                    controllerAs: 'tc'
+                    controller: 'CameraController',
+                    controllerAs: 'cc'
                 })
                 .when('/leaderboard', {
                     templateUrl: prefix + 'leaderboard.html',

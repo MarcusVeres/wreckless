@@ -459,5 +459,36 @@
     ]);
 
 
+    // camera page
+    appControllers.controller( 'CameraController' , [
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
+        {
+
+            // camera meme (only one)
+            $scope.camera = [
+                {
+                    "name" : "camera",
+                    "url" : "/assets/img/camera-image-square.jpg",
+                    "top" : "",
+                    "bottom" : ""
+                }
+            ];
+
+            // function to edit custom photo
+            $scope.use_photo = function() 
+            {
+                // set the current meme in the something service so we can carry it across views
+                var selected = $scope[ 'camera' ][ 0 ];
+                something.setProperty( 'current_meme' , selected ); 
+
+                // redirect to the edit screen
+                $location.path('/edit'); // path not hash
+            }
+
+        }
+    ]);
+
+
 })(angular);
 
