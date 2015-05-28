@@ -63,8 +63,18 @@
                     controller: 'LeaderboardController',
                     controllerAs: 'lbc'
                 })
+                .when('/privacy', {
+                    templateUrl: prefix + 'privacy.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/terms', {
                     templateUrl: prefix + 'terms.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/share', {
+                    templateUrl: prefix + 'share.html',
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
