@@ -387,6 +387,38 @@
                 $location.path('/review'); // path not hash
             }
 
+
+            // toggle wreckless from manage screen
+            // ( duplicate functionality, but I'm in a hurry
+
+            $scope.is_wreckless = function(){
+                return something.getProperty( 'is_wreckless' );
+            }
+
+            $scope.get_wreckless = function(){
+                something.setProperty( 'is_wreckless' , true );
+                console.log("oh, it's on now!");
+            }
+
+            $scope.chill_out = function(){
+                something.setProperty( 'is_wreckless' , false );
+                console.log("meh... ");
+            }
+
+            $scope.toggle_wreckless = function(){
+                var is_wreckless = something.getProperty('is_wreckless');
+                if( is_wreckless ){
+                    $scope.chill_out();
+                } else {
+                    $scope.get_wreckless();
+                }
+
+                // redirect to the home screen
+                $location.path('/home'); // path not hash
+            }
+
+            // 
+
         }
     ]);
 
