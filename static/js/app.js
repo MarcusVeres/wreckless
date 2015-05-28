@@ -53,6 +53,11 @@
                     controller: 'ReviewController',
                     controllerAs: 'rc'
                 })
+                .when('/take-photo', {
+                    templateUrl: prefix + 'take-photo.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/leaderboard', {
                     templateUrl: prefix + 'leaderboard.html',
                     controller: 'LeaderboardController',
