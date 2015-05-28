@@ -31,6 +31,17 @@
             var id = _this.meme_id;
             meme_object.id = id;
 
+            // check if id already exists in the system
+            for( var i = 0 , len = _this.user_memes.length ; i < len ; i++ )
+            {
+                var current = _this.user_memes[i];
+                if( id == current.id ){
+                    // remove the item
+                    _this.user_memes.splice( i , 1 );
+                    break;
+                }
+            }
+
             // add the object to our array
             _this.user_memes.push( meme_object );
 
