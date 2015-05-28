@@ -116,7 +116,6 @@
                 $scope.go_back = function(){
 
                     // back button does different things
-
                     var go_to = '';
 
                     switch( current )
@@ -137,6 +136,9 @@
                             go_to = '/home';
                             break;
                         case 'add':
+                            go_to = '/meme-library';
+                            break;
+                        case 'review':
                             go_to = '/meme-library';
                             break;
                         default: 
