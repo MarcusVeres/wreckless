@@ -133,11 +133,11 @@
                         case 'forgot':
                             go_to = '/login';
                             break;
-                        case 'manage':
+                        case 'meme-library':
                             go_to = '/home';
                             break;
                         case 'add':
-                            go_to = '/manage';
+                            go_to = '/meme-library';
                             break;
                         default: 
                             window.history.back();
@@ -301,13 +301,11 @@
     ]);
 
 
-    // manage
+    // meme-library
     appControllers.controller( 'ManageController' , [
                  '$scope','$http','$location','something',
         function( $scope , $http , $location , something )
         {
-            // console.log("loading manage controller");
-
             // super fast and ghetto development
 
             // user memes
@@ -388,7 +386,7 @@
             }
 
 
-            // toggle wreckless from manage screen
+            // toggle wreckless from meme-library screen
             // ( duplicate functionality, but I'm in a hurry
 
             $scope.is_wreckless = function(){
@@ -441,7 +439,7 @@
                 something.add_meme( $scope.current_meme );
 
                 // redirect to the manage screen
-                $location.path('/manage'); // path not hash
+                $location.path('/meme-library'); // path not hash
             };
 
             // TODO: make it pretty
@@ -467,7 +465,7 @@
                 something.remove_meme( $scope.current_meme );
 
                 // redirect to the manage screen
-                $location.path('/manage'); 
+                $location.path('/meme-library'); 
             };
 
         }

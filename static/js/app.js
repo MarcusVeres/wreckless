@@ -43,8 +43,8 @@
                     controller: 'EditController',
                     controllerAs: 'ec'
                 })
-                .when('/manage', {
-                    templateUrl: prefix + 'manage.html',
+                .when('/meme-library', {
+                    templateUrl: prefix + 'meme-library.html',
                     controller: 'ManageController',
                     controllerAs: 'mc'
                 })
