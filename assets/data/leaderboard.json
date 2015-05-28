@@ -3,38 +3,44 @@
         "rank" : 1,
         "first_name" : "Bill",
         "last_name" : "Burr",
-        "location" : "Ontario"
+        "location" : "Ontario",
+        "points" : 5129
     },
     {
         "rank" : 2,
         "first_name" : "Tony",
         "last_name" : "T",
-        "location" : "Manitoba"
+        "location" : "Manitoba",
+        "points" : 4972
     },
     {
         "rank" : 3,
         "first_name" : "Yoghi",
         "last_name" : "Behr",
-        "location" : "Ontario"
+        "location" : "Ontario",
+        "points" : 4401
     },
     {
         "rank" : 130,
         "first_name" : "Your",
         "last_name" : "Name",
         "location" : "Ontario",
-        "selected" : true
+        "selected" : true,
+        "points" : 2081
     },
     {
         "rank" : 131,
         "first_name" : "Someone",
         "last_name" : "Else",
-        "location" : "Montreal"
+        "location" : "Montreal",
+        "points" : 1943
     },
     {
         "rank" : 132,
-        "first_name" : "Nobody",
-        "last_name" : "Important",
-        "location" : "Saskatchewan"
+        "first_name" : "John",
+        "last_name" : "Deere",
+        "location" : "Saskatchewan",
+        "points" : 1922
     }
 ]
 
