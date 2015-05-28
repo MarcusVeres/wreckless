@@ -50,7 +50,7 @@
         <div class="meme-wrapper">   
             <ul class="meme-list row">
 
-                <li ng-repeat="meme in user_memes" class="col-xs-4" >
+                <li ng-repeat="meme in user_memes track by $index" class="col-xs-4" >
                     <div class="image-wrapper" ng-click="review_meme( 'user_memes' , $index )">
                         <p class="top">{{ meme.top }}</p>
                         <img ng-src="{{ meme.url }}" alt="{{ meme.name }}" />
