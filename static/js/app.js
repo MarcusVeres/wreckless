@@ -93,6 +93,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/account', {
+                    templateUrl: prefix + 'account.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/login', {
                     templateUrl: prefix + 'login.html',
                     controller: 'TestController',
