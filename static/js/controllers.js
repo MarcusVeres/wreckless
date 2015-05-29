@@ -143,6 +143,12 @@
                         case 'forgot':
                             go_to = '/login';
                             break;
+                        case 'account':
+                            go_to = '/home';
+                            break;
+                        case 'my-points':
+                            go_to = '/home';
+                            break;
                         case 'meme-library':
                             go_to = '/home';
                             break;
