@@ -93,6 +93,11 @@
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })
+                .when('/summary', {
+                    templateUrl: prefix + 'summary.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
                 .when('/landing', {
                     templateUrl: prefix + 'landing.html',
                     controller: 'TestController',
@@ -135,6 +140,11 @@
                 })
                 .when('/tbd-prize', {
                     templateUrl: prefix + 'tbd-prize.html',
+                    controller: 'TestController',
+                    controllerAs: 'tc'
+                })
+                .when('/tbd-messages', {
+                    templateUrl: prefix + 'tbd-messages.html',
                     controller: 'TestController',
                     controllerAs: 'tc'
                 })

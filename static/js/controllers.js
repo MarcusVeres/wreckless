@@ -257,8 +257,8 @@
 
     // home page
     appControllers.controller( 'HomeController' , [
-                 '$scope','$http','something',
-        function( $scope , $http , something )
+                 '$scope','$http','$location','something',
+        function( $scope , $http , $location , something )
         {
             // console.log("loading home controller");
 
@@ -282,6 +282,9 @@
             $scope.chill_out = function(){
                 something.setProperty( 'is_wreckless' , false );
                 console.log("meh... ");
+
+                // redirect to the edit screen
+                $location.path('/summary'); // path not hash
             }
 
             $scope.toggle_wreckless = function(){
@@ -420,6 +423,9 @@
             $scope.chill_out = function(){
                 something.setProperty( 'is_wreckless' , false );
                 console.log("meh... ");
+
+                // redirect to the edit screen
+                $location.path('/summary'); // path not hash
             }
 
             $scope.toggle_wreckless = function(){
