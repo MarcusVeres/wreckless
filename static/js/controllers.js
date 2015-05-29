@@ -127,7 +127,7 @@
                 $scope.go_back = function(){
 
                     // back button does different things
-                    var go_to = '';
+                    var go_to = '/home';
 
                     switch( current )
                     {
