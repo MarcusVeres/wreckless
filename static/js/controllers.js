@@ -158,6 +158,9 @@
                         case 'review':
                             go_to = '/meme-library';
                             break;
+                        case 'tweak-photo':
+                            go_to = '/take-photo';
+                            break;
                         default: 
                             window.history.back();
                     }
@@ -601,6 +604,13 @@
 
                 // redirect to the edit screen
                 $location.path('/edit'); // path not hash
+            }
+
+            // go back
+            $scope.go_back = function()
+            {
+                console.log( "goin back" );
+                $location.path( '/take-photo' ); // path not hash
             }
 
         }
