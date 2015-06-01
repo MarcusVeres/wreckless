@@ -63,6 +63,11 @@
                     controller: 'CameraController',
                     controllerAs: 'cc'
                 })
+                .when('/tweak-photo', {
+                    templateUrl: prefix + 'tweak-photo.html',
+                    controller: 'TweakController',
+                    controllerAs: 'tc'
+                })
                 .when('/leaderboard', {
                     templateUrl: prefix + 'leaderboard.html',
                     controller: 'LeaderboardController',
