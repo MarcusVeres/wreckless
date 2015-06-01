@@ -161,6 +161,12 @@
                         case 'tweak-photo':
                             go_to = '/take-photo';
                             break;
+                        case 'terms':
+                            go_to = '/account';
+                            break;
+                        case 'privacy':
+                            go_to = '/account';
+                            break;
                         default: 
                             window.history.back();
                     }
